@@ -2,8 +2,19 @@ import React from 'react'
 import styles from './Modal.module.scss'
 import AddComment from '@/src/features/AddComment/ui/AddComment'
 import { Props } from './types'
+import { Api } from '@/src/entities/Comment/api'
+import { CommentModel } from '@/src/entities/Comment'
 
 const Modal = ({ comments, ...props }: Props) => {
+    // const test = () => {
+    //     Api.send({
+    //         data: {
+    //             content: '123',
+    //             author: 'test',
+    //             picture: 1
+    //         }
+    //     })
+    // }
     return (
         <div className={styles.root}>
             <div className={styles.root__modal}>
@@ -56,7 +67,7 @@ const Modal = ({ comments, ...props }: Props) => {
                                 )
                             )}
                         </div>
-                        <AddComment />
+                        <AddComment id={props.id as number} />
                     </div>
                 </div>
             </div>

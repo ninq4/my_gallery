@@ -11,7 +11,6 @@ const Card = (props: Props) => {
     } else {
         document.body.style.overflow = 'auto'
     }
-    console.log(props.comment)
     return (
         <>
             <div className={styles.root}>
@@ -37,6 +36,7 @@ const Card = (props: Props) => {
                     date={props.data}
                     image={props.image}
                     comments={props.comment}
+                    id={props.id}
                 />
             )}
         </>

@@ -1,5 +1,5 @@
 export type TPictire = {
-    id?: string
+    id?: number
     attributes: {
         title: string
         descr?: string

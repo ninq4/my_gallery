@@ -5,4 +5,5 @@ export type Props = {
     onClick?: () => void
     description?: string
     comment: any
+    id: number
 }

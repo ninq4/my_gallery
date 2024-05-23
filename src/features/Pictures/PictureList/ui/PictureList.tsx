@@ -18,6 +18,7 @@ const PictureList = () => {
                         )}
                         description={item.attributes.descr}
                         comment={item.attributes.comments}
+                        id={item.id as number}
                     />
                 ))}
         </div>

@@ -1,26 +1,37 @@
 import { makeAutoObservable } from 'mobx'
 class AuthStore {
     private _token: string
-    private _userId: string
+    private _userName: string
     constructor() {
         makeAutoObservable(this)
         this._token = localStorage.getItem('token') || ''
-        this._userId = ''
+        this._userName = localStorage.getItem('userName') || ''
     }
     clear() {
         localStorage.removeItem('token')
+        localStorage.removeItem('userName')
         this._token = ''
-        this._userId = ''
+        this._userName = ''
     }
     get token() {
         return this._token
     }
-    private setLocalStorage(value: string) {
-        localStorage.setItem('token', value)
+    get userName() {
+        return this._userName
     }
-    set token(value: string) {
-        this._token = value
-        this.setLocalStorage(value)
+    private setLocalStorageToken(token: string) {
+        localStorage.setItem('token', token)
+    }
+    private setUserName(userName: string) {
+        localStorage.setItem('userName', userName)
+    }
+    set token(token: string) {
+        this._token = token
+        this.setLocalStorageToken(token)
+    }
+    set userName(userName: string) {
+        this._userName = userName
+        this.setUserName(userName)
     }
 }
 export default new AuthStore()

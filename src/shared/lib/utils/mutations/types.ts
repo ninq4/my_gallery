@@ -1,5 +1,5 @@
 export type TBaseEntity = {
-    guid: string
+    id: string
 }
 export type TMutationParameters<T> = {
     onSuccess?: (data?: T) => void

@@ -5,4 +5,5 @@ export type Props = {
     description?: string
     image?: string
     comments?: any
+    id: number
 }

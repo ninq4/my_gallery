@@ -12,6 +12,7 @@ export const useAuth = () => {
             const result = await authApi.login(data)
             if (result.jwt) {
                 store.token = result.jwt ?? ''
+                store.userName = result.user?.username ?? ''
                 navigate('/')
             }
         } catch (error) {
