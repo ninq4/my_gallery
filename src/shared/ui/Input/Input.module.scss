@@ -1,0 +1,22 @@
+@use 'variables';
+
+.root {
+    &__input {
+        outline: none;
+        width: 100%;
+        background-color: transparent;
+        color: #202020;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 3px 14px;
+        border: 1.49px solid #202020;
+        box-shadow: 0 0 40px 0 rgb(86 86 86 / 30%);
+        border-radius: 20px;
+
+        &::placeholder {
+            color: #353535;
+        }
+
+        @include variables.font-montserrat;
+    }
+}

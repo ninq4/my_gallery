@@ -1,0 +1,89 @@
+@use 'variables';
+
+.root {
+    position: relative;
+    background-color: #f5faff;
+    box-shadow: 0 0 40px 0 rgb(86 86 86 / 30%);
+    margin-top: 100px;
+    max-width: 1200px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 200px;
+    padding-right: 50px;
+
+    &__logo {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 264px;
+        height: 264px;
+        background-color: #f5faff;
+        border-radius: 50%;
+        box-shadow: 0 0 40px 0 rgb(86 86 86 / 30%);
+
+        &Text {
+            font-size: 36px;
+            color: #202020;
+
+            @include variables.font-comfortaa;
+        }
+    }
+
+    &__nav {
+        margin-left: 300px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+
+        // gap: 300px;
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+
+    &__item {
+        font-size: 16px;
+        color: #202020;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &[aria-current='page'] {
+            color: #64d370;
+        }
+
+        &:hover {
+            color: #64d370;
+        }
+
+        @include variables.font-montserrat;
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        color: #202020;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+            color: #64d370;
+        }
+
+        @include variables.font-montserrat;
+    }
+}

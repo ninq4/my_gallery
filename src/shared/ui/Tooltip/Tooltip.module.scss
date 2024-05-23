@@ -1,0 +1,16 @@
+@use 'variables';
+
+.root {
+    background-color: #f5faff !important;
+    color: #64d370 !important;
+    border-radius: 60px !important;
+    padding: 5px !important;
+    box-shadow: 0 0 40px 0 rgb(86 86 86 / 30%) !important;
+    z-index: 2!important;
+
+    &__arrow {
+        color: #f5faff !important;
+    }
+
+    @include variables.font-montserrat;
+}

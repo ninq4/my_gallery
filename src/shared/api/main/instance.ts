@@ -1,5 +1,6 @@
 import ky, { HTTPError } from 'ky'
 import { Config } from '../../config'
+import { AuthStore } from '@/src/entities/Auth/model'
 
 declare module 'ky' {
     interface HTTPError {
@@ -15,7 +16,9 @@ const api = ky.create({
     throwHttpErrors: true,
     prefixUrl: Config.API_URL,
     headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Allow-Origin': '*',
+        Authorization: `Bearer ${AuthStore.token || ''}`
     },
     hooks: {
         beforeRequest: [

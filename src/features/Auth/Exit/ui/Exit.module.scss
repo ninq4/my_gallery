@@ -1,0 +1,17 @@
+@use 'variables';
+
+.root {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #202020;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+        color: #64d370;
+    }
+
+    @include variables.font-montserrat;
+}

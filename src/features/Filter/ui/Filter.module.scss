@@ -1,0 +1,93 @@
+.root {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    transform: translate(350%, -220%);
+
+    &__mainButton {
+        position: relative;
+        z-index: 2;
+        width: 40px;
+        height: 40px;
+        background-color: #f5faff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 40px 0 rgb(86 86 86 / 30%);
+
+        &:hover {
+            background-color: #64d370;
+
+            svg * {
+                fill: #f5faff;
+            }
+        }
+    }
+
+    &__buttons {
+        position: absolute;
+        inset: 0;
+    }
+
+    &__button {
+        width: 30px;
+        height: 30px;
+        background-color: #f5faff;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 40px 0 rgb(86 86 86 / 30%);
+
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        // &:nth-child(1) {
+        //     top: 0;
+        //     right: 0;
+        // }
+
+        // &:nth-child(2) {
+        //     bottom: 0;
+        //     right: 0;
+        // }
+
+        // &:nth-child(3) {
+        //     bottom: 0;
+        //     left: 0;
+        // }
+
+        &:hover {
+            background-color: #64d370;
+
+            svg * {
+                fill: #f5faff;
+            }
+        }
+    }
+
+    &__link1 {
+        position: absolute;
+        top: 0 !important;
+        right: 0 !important;
+    }
+
+    &__link2 {
+        position: absolute;
+        bottom: 0 !important;
+        right: 0 !important;
+    }
+
+    &__link3 {
+        position: absolute;
+        bottom: 0 !important;
+        left: 0 !important;
+    }
+}
