@@ -9,5 +9,10 @@ export const Api = {
         return CRUD.create('api/pictures', {
             body: JSON.stringify(data)
         })
+    },
+    isFavorite: () => {
+        return CRUD.get<TPictire>(
+            'api/pictures?filters[isFavorite][$in]=true&populate=*'
+        )
     }
 }

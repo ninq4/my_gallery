@@ -10,7 +10,7 @@ export const useSendComment = (props: TMutationParameters<TCreateComment>) => {
     return useMutation({
         mutationFn: (data: any) => commentApi.send(data),
         onSuccess: (comment) => {
-            queryClient.setQueryData(['comments'], (prev: TComment[]) => {
+            queryClient.setQueryData(['pictures'], (prev: TComment[]) => {
                 return mutateCreate(prev, comment.data)
             })
 

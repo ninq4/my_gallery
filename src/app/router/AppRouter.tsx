@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 const Pictires = lazy(() => import('@/src/pages/page'))
 const Register = lazy(() => import('@/src/pages/Auth/Register/page'))
 const Login = lazy(() => import('@/src/pages/Auth/Login/page'))
+const Favorite = lazy(() => import('@/src/pages/Favorite/page'))
 
 export const AppRouter = () => {
     return (
@@ -29,6 +30,14 @@ export const AppRouter = () => {
                 element={
                     <Suspense>
                         <Register />
+                    </Suspense>
+                }
+            />
+            <Route
+                path='/favorite'
+                element={
+                    <Suspense>
+                        <Favorite />
                     </Suspense>
                 }
             />

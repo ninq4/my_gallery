@@ -1,14 +1,13 @@
-import { PicturesModel } from '@/src/entities/Pictures'
 import styles from './PictureList.module.scss'
 import Card from '@/src/shared/ui/Card/Card'
 import { TPictire } from '@/src/entities/Pictures/model/types'
 import { formatImage } from '@/src/shared/lib/utils/image/image'
-const PictureList = () => {
-    const { data } = PicturesModel.Hooks.useGetPicture()
+import { Props } from './types'
+const PictureList = ({ list }: Props) => {
     return (
         <div className={styles.root}>
-            {data?.data &&
-                data?.data.map((item: TPictire, index: number) => (
+            {list?.data &&
+                list?.data.map((item: TPictire, index: number) => (
                     <Card
                         key={index}
                         title={item.attributes.title}

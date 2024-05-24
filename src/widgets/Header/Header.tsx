@@ -25,6 +25,14 @@ const Header = observer(() => {
                         >
                             Авторы
                         </NavLink>
+                        {token && (
+                            <NavLink
+                                className={styles.root__item}
+                                to='/favorite'
+                            >
+                                Избранное
+                            </NavLink>
+                        )}
                     </menu>
                     <div className={styles.root__actions}>
                         {!token ? (
@@ -48,7 +56,6 @@ const Header = observer(() => {
                     </div>
                 </nav>
             </header>
-
             <Filter />
         </>
     )

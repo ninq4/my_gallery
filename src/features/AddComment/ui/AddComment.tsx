@@ -21,11 +21,11 @@ const AddComment = (props: Props) => {
         }
     }
     const hook = CommentModel.Hooks.useSendComment({})
-    const onSubmit = (event: FormEvent<HTMLFormElement>) => {
+    const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        hook.mutate(resp)
-        queryClient.invalidateQueries({ queryKey: ['comments'] })
+        await hook.mutate(resp)
         setContent('')
+        await queryClient.invalidateQueries({ queryKey: ['pictures'] })
     }
     return (
         <form onSubmit={onSubmit} className={classNames}>
